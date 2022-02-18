@@ -1,10 +1,7 @@
 ﻿using System;
 
-namespace TPPoint
+namespace TPBiblio
 {
-
-
-    
     class Livre
     {
         private string _Title;
