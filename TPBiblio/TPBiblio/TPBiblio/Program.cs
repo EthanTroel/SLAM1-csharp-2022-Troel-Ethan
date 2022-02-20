@@ -48,10 +48,16 @@ namespace TPBiblio
         }
 
 
-
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Vous lisez {0} ,{1} et qui fait {2}");
+        Livre L1 = new Livre("Le petit prince", "lorem ipsum", 120);
+        char r;
+            do
+            {
+                Console.WriteLine("Vous lisez {0}, d'une longueur de {1} pages.\n\nContenu du livre :\n{2}\n", L1.title, L1.pageCount, L1.content);
+                L1.Read();
+                Console.WriteLine("Nombre de lectures : {0}", L1.readCount);
+                Console.WriteLine("Voulez-vous relire le livre ? (O/N)");
+                r = Convert.ToChar(Console.ReadLine());
+            } while (r is 'O' or 'o');
 
 
 
