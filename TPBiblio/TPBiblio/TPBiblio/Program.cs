@@ -14,6 +14,9 @@ namespace TPBiblio
 
         private int _ReadCount;
 
+        public Livre(string v1, string v2, int v3)
+        {
+        }
 
         public int ReadCount
         {
@@ -41,26 +44,23 @@ namespace TPBiblio
         }
 
 
-        public void Read()
+        public string Read()
         {
-            string ContenuLivre = Title + Contenu + PageCount;
-            ReadCount = ReadCount++;
+            _ReadCount++;
+            return _Contenu;
         }
 
 
-        Livre L1 = new Livre("Le petit prince", "lorem ipsum", 120);
-        char r;
-            do
-            {
-                Console.WriteLine("Vous lisez {0}, d'une longueur de {1} pages.\n\nContenu du livre :\n{2}\n", L1.title, L1.pageCount, L1.content);
-                L1.Read();
-                Console.WriteLine("Nombre de lectures : {0}", L1.readCount);
-                Console.WriteLine("Voulez-vous relire le livre ? (O/N)");
-                r = Convert.ToChar(Console.ReadLine());
-            } while (r is 'O' or 'o');
 
-
-
+        static void Main(string[] args)
+        {
+            Livre Livre1 = new Livre("Livre1", "nnnnnnn", 50);
+                Console.WriteLine("Vous lisez {0}, qui fait {1} pages.\n\nContenu:\n{2}\n", Livre1.Title, Livre1.PageCount, Livre1.Contenu);
+                Livre1.Read();
+                Console.WriteLine("Nblectures : {0}", Livre1.ReadCount);
+                DateTime date = DateTime.Now;
+                TimeSpan time = new TimeSpan(36, 0, 0, 0);
+                DateTime combined = date.Add(time);
         }
     }
 }
