@@ -37,14 +37,14 @@ namespace CarnetAdresse
         public string Identifier
         {
             get { return _Identifier; }
-            set { _Identifier = value;  }
+            set { _Identifier = value; }
         }
 
 
         public string Lastname
         {
             get { return _Lastname; }
-            set { _Lastname = value;  }
+            set { _Lastname = value; }
         }
 
 
@@ -74,26 +74,31 @@ namespace CarnetAdresse
         }
 
 
-
+    }
 
         //Méthodes
-        var Contact = new List<string>(Contact);
-        Contact.Add("New York");
-cities.Add("London");
-cities.Add("Mumbai");
-cities.Add("Chicago");
-cities.Add(null);// nulls are allowed for reference type list
+        public string ContactedCount()
+    {
+        _ContactedCount++;
+        return _ContactedCount;
+    }
 
 
 
 
         static void Main(string[] args)
         {
-            Livre Livre1 = new Livre("Livre1", "nnnnnnn", 50);
-            Console.WriteLine("Vous lisez {0}, qui fait {1} pages.\n\nContenu:\n{2}\n", Livre1.Title, Livre1.PageCount, Livre1.Contenu);
-            Livre1.Read();
-            Console.WriteLine("Nblectures : {0}", Livre1.ReadCount);
-        }
+        Contact Contact1 = new Contact("Contact1", "nnnnnnn", );
+        Contact Contact2 = new Contact("Contact1", "nnnnnnn", );
+        Contact Contact3 = new Contact("Contact1", "nnnnnnn", );
+        Contact Contact4 = new Contact("Contact1", "nnnnnnn", );
+        Contact Contact5 = new Contact("Contact1", "nnnnnnn", );
+        Contact Contact6 = new Contact("Contact1", "nnnnnnn", );
+        Contact Contact7 = new Contact("Contact1", "nnnnnnn", );
+        Console.WriteLine();
+        Contact1.Read();
+        Console.WriteLine();
+    }
     }
 }
 
